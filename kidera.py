@@ -1,6 +1,10 @@
 import pandas
 
-kidera_factors = pandas.read_csv('kidera.csv', header=None, index_col=0)
+import os
+path, _ = os.path.split(__file__)
+kidera_factors = pandas.read_csv(os.path.join(path, 'kidera.csv'),
+                                 header=None,
+                                 index_col=0)
 symbol_lookup = { 'ALA': 'A', 'ARG': 'R',
                   'ASN': 'N', 'ASP': 'D',
                   'CYS': 'C', 'GLN': 'Q',
