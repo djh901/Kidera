@@ -15,8 +15,8 @@ symbol_lookup = { 'ALA': 'A', 'ARG': 'R',
 kidera_factors.index = kidera_factors.index \
                                      .map(lambda x: symbol_lookup[x])
 
-def positional_score(sequence):
+def score_positions(sequence):
     return kidera_factors.loc[list(sequence)]
 
-def aggregate_score(sequence):
+def score_sequence(sequence):
     return kidera_factors.loc[list(sequence)].sum() / 10
