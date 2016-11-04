@@ -23,4 +23,4 @@ def score_positions(sequence):
     return kidera_factors.loc[list(sequence)]
 
 def score_sequence(sequence):
-    return kidera_factors.loc[list(sequence)].sum() / 10
+    return kidera_factors.loc[list(sequence)].sum() / len(sequence)
